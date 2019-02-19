@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>photoViewMobile</title>
+	<title>PhotoView</title>
 	<meta charset="utf-8">
 
 	<meta name="apple-touch-fullscreen" content="yes" />
@@ -14,10 +14,10 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 
-	<script type="text/javascript" src="../src/photoViewMobile.js"></script>
+	<script type="text/javascript" src="../src/PhotoView.js"></script>
 </head>
 <style type="text/css">
-	*{margin: 0 ; padding:0;}
+	*{margin: 0; padding:0;}
 	body,html{width: 100%;height: 100%;}
 	.app{
 		padding:0 12px;
@@ -39,8 +39,9 @@
 		background-repeat: no-repeat;
 	}
 	.description{
-		font-size: .9rem;
-		color: #333;
+		width: 80%;
+		font-size: .8rem;
+		color: #444;
 		padding:10px 0;
 	}
 	#but{
@@ -49,9 +50,19 @@
 		background-color: #eee;
 		outline: none; 
 	}
+	.bar{
+		width: 100%;
+		height: 50px;
+		background: #cb25ae;
+		line-height: 50px;
+		text-align: center;
+		font-size: 1em;
+		color: #fff;
+	}
 	
 </style>
 <body>
+	<div class="bar">PhotoView</div>
 	<div class="app">
 		<p class="description">在多宫格的场景下使用，在配置parentTag和imageTag后将会自动获取所有的图片</p>
 		<ul id="container">
@@ -72,7 +83,7 @@
 
 		parentTag.onclick = function (event){
 			var index = Array.prototype.indexOf.call(childs , event.target);
-			var v = new photoViewMobile({
+			var v = new PhotoView({
 				parentTag:'#container',
 				imageTag:'li',
 				imgIndex:index,
@@ -81,7 +92,7 @@
 			})
 		}
 		but.onclick = function (){
-			var v = new photoViewMobile({
+			var v = new PhotoView({
 				urls:[
 					'https://wx1.sinaimg.cn/large/63885668ly1fzgoxtxacqj235w4qtkjm.jpg',
 					'https://wx4.sinaimg.cn/large/63885668ly1fzgoxym4yuj237r4tm4qr.jpg',
