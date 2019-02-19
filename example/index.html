@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>photoViewMobile</title>
 	<meta charset="utf-8">
 
 	<meta name="apple-touch-fullscreen" content="yes" />
@@ -14,7 +14,7 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
 
-	<script type="text/javascript" src="../src/ImageView.js"></script>
+	<script type="text/javascript" src="../src/photoViewMobile.js"></script>
 </head>
 <style type="text/css">
 	*{margin: 0 ; padding:0;}
@@ -72,7 +72,7 @@
 
 		parentTag.onclick = function (event){
 			var index = Array.prototype.indexOf.call(childs , event.target);
-			var v = new ImageView({
+			var v = new photoViewMobile({
 				parentTag:'#container',
 				imageTag:'li',
 				imgIndex:index,
@@ -81,7 +81,7 @@
 			})
 		}
 		but.onclick = function (){
-			var v = new ImageView({
+			var v = new photoViewMobile({
 				urls:[
 					'https://wx1.sinaimg.cn/large/63885668ly1fzgoxtxacqj235w4qtkjm.jpg',
 					'https://wx4.sinaimg.cn/large/63885668ly1fzgoxym4yuj237r4tm4qr.jpg',

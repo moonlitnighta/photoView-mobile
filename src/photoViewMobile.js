@@ -1,12 +1,12 @@
 /*!
- * ImageView.js v1.0
+ * photoViewMobile.js v1.0
  * 2016.5.6 NocturneFFg
  */ 
 
 (function(global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
         typeof define === 'function' && define.amd ? define(factory) :
-        (global.ImageView = factory());
+        (global.photoViewMobile = factory());
 }(this, (function() {
     'use strict';
 
@@ -91,11 +91,11 @@
 	    }
     };
 
-    //ImageView
-    function ImageView(options){
+    //photoViewMobile
+    function photoViewMobile(options){
     	//修正
-    	if(!(this instanceof ImageView)){
-    		return new ImageView(options);
+    	if(!(this instanceof photoViewMobile)){
+    		return new photoViewMobile(options);
     	}
     	//合并并检查参数
     	if(!(this.options = mergeOptions(options))){
@@ -108,7 +108,7 @@
     /**
 	* 关闭view
 	**/
-    ImageView.prototype.close = function (){
+    photoViewMobile.prototype.close = function (){
     	closeComplete.load = !(view.state = false);
 
     	var options = this.options ,
@@ -354,7 +354,7 @@
     		node.style.left = screenWidth * i + l + 'px';
     	}
     	function close(){
-    		ImageView.prototype.close.call({options:options});
+    		photoViewMobile.prototype.close.call({options:options});
     	}
     	function setScale(x , y , s , node){
     		setTransform((node || img).style , 'translate3d('+ x +'px , '+ y +'px , 0) scale('+s+')');
@@ -429,7 +429,7 @@
     **/
     function mergeOptions(sourceOpt){
     	if(!sourceOpt || (!sourceOpt.urls && !sourceOpt.imageTag)){
-    		console.warn('ImageView: Please add an image source (urls or imageTag)');
+    		console.warn('photoViewMobile: Please add an image source (urls or imageTag)');
     		return;
     	}
 
@@ -843,6 +843,6 @@
 		} , 30);
 	}
 
-    return ImageView;
+    return photoViewMobile;
 
 })));
