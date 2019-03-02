@@ -6,7 +6,7 @@
 <br />
 <br />
 
- ![image](https://github.com/moonlitnighta/flightGame/blob/master/file/ab00494b-40e0-4a4f-989a-277d23a97e50.gif)
+ ![image](https://github.com/moonlitnighta/photoView-mobile/blob/master/ab00494b-40e0-4a4f-989a-277d23a97e50%20(1).gif)
  
 <br />
 <br />
